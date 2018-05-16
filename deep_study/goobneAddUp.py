@@ -46,3 +46,5 @@ m = goobne_table.merge(sido_table, on= ['sido', 'gungu'], how='outer', suffixes=
 m_result = m.query('_merge =="left_only"')
 print("여기서 수정해야함")
 print(m_result[['sido','gungu']])
+
+goobne_table.to_csv('goobne_modify.csv', encoding="euc-kr", mode='a', header=False)
